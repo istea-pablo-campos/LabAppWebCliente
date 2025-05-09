@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda - TryItCatch</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="bg-primary text-white p-3 d-flex justify-content-between align-items-center">
+    <h1 class="h4 mb-0 site-title">TRY IT CATCH</h1>
+    <input type="text" id="search" placeholder="Buscar producto..." class="form-control w-25" />
+    <button class="btn btn-light" id="cartBtn">
+      🛒 <span id="cartCount" class="badge bg-danger">0</span>
+    </button>
+  </header>
+
+  <!-- Contenedor principal para los productos -->
+  <main class="container my-4">
+    <div id="product-list" class="row"></div>
+  </main>
+
+<!-- Modal para ver detalles del producto -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="modalTitle" class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- Miniatura -->
+        <img id="modalImage" src="" alt="" class="img-thumbnail mb-3" style="max-width: 150px;" />
+        
+        <!-- Descripción -->
+        <p id="modalDescription"></p>
+        <p id="modalPrice" class="fw-bold text-end"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="addToCartBtn" class="btn btn-success">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Sidebar para mostrar los productos del carrito -->
+  <div id="cartSidebar" class="offcanvas offcanvas-end" tabindex="-1">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Tu Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"></div>
+      <hr />
+      <button class="btn btn-outline-danger w-100 mb-2" id="clearCart">Eliminar todo</button>
+      <button class="btn btn-success w-100" id="checkout">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- Scripts necesarios -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

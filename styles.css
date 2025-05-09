@@ -1,0 +1,139 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(152, 153, 167);
+  color: #212529;
+}
+
+.site-title {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #f8b500, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+/* productos */
+.card {
+  border: 2px solid #dee2e6;
+  border-left: 6px solid #0d6efd;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* img */
+.card img {
+  object-fit: contain;
+  height: 200px;
+}
+
+/* iconoC */
+#cartBtn {
+  position: relative;
+}
+
+#cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.75rem;
+}
+
+/* carrito */
+.offcanvas {
+  border-left: 4px solid #198754;
+  background-color: #fefefe;
+}
+
+/* Estilo para cada img carrito */
+#cartItems {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#cartItems button {
+  margin: 0 2px;
+}
+
+/* Colores de borde precio */
+.card.price-low {
+  border: 2px solid #198754;
+}
+
+.card.price-mid {
+  border: 2px solid #fd7e14;
+}
+
+.card.price-high {
+  border: 2px solid #dc3545;
+}
+.card.price-low:hover {
+  box-shadow: 0 0 10px #19875444;
+}
+.card.price-mid:hover {
+  box-shadow: 0 0 10px #fd7e1444;
+}
+.card.price-high:hover {
+  box-shadow: 0 0 10px #dc354544;
+}
+
+/* Modal personalizado */
+.modal-content {
+  border: 3px solid #0d6efd;
+  border-radius: 10px;
+}
+
+#modalImage {
+  max-width: 150px;
+  border: 4px;
+}
+/* color segun el precio */
+.btn.price-low {
+  background-color: #198754;
+  border-color: #198754;
+  color: white;
+}
+
+.btn.price-low:hover {
+  background-color: #157347;
+  border-color: #157347;
+}
+
+.btn.price-mid {
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+  color: white;
+}
+
+.btn.price-mid:hover {
+  background-color: #e96a00;
+  border-color: #e96a00;
+}
+
+.btn.price-high {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.btn.price-high:hover {
+  background-color: #bb2d3b;
+  border-color: #bb2d3b;
+}
+
+.modal-content.price-low {
+  border: 3px solid #198754;
+}
+
+.modal-content.price-mid {
+  border: 3px solid #fd7e14;
+}
+
+.modal-content.price-high {
+  border: 3px solid #dc3545;
+}
